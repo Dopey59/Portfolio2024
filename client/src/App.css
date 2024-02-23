@@ -1,0 +1,58 @@
+/*Title Font*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Paytone+One&display=swap');
+
+/*Bar Code */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39&display=swap');
+
+/* Font sans fond */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39&family=Rubik+Doodle+Shadow&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+
+html{
+    background-color: rgba(231, 231, 231, 0.63);
+}
+
+h1 {
+    font-family: "Paytone One", sans-serif;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+}
+
+.emptyFont{
+    font-family: "Rubik Doodle Shadow", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.barCode{
+    font-family: "Libre Barcode 39", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dot {
+    height: 23px;
+    width: 23px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #FE5B00;
+    margin-right: 5.9rem;
+}
+
+  @media screen and (max-width: 640px) {
+    .dot {
+        height: 13px;
+        width: 13px;
+        border-radius: 50%;
+        display: inline-block;
+        background-color: #FE5B00;
+        margin-left: 9.3rem;
+    }
+
+}
