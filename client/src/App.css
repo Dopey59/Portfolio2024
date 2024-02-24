@@ -32,7 +32,6 @@ p {
 .barCode{
     font-family: "Libre Barcode 39", system-ui;
     font-weight: 400;
-    font-style: normal;
 }
 
 .dot {
@@ -54,13 +53,6 @@ p {
     display: none;  /* Chrome, Safari, Opera*/
 }
 
-@media screen and (max-width: 640px) {
-  .dot {
-      height: 13px;
-      width: 13px;
-      border-radius: 50%;
-      display: inline-block;
-      background-color: #FE5B00;
-      margin-left: 9.3rem;
-  }
+.svgFilter{
+    filter: brightness(0) saturate(100%) invert(44%) sepia(56%) saturate(5034%) hue-rotate(2deg) brightness(103%) contrast(104%);
 }

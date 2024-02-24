@@ -5,6 +5,8 @@ import PhotoProfil from "../src/assets/pp.jpg";
 import Phone from "../src/assets/phone.jpg";
 
 import Skills from "./components/skills";
+import Projects from "./components/projects";
+
 
 
 function App() {
@@ -27,10 +29,10 @@ function App() {
             </div>
             <div className='flex justify-end '>
               <div className='absolute items-end sm:mt-3 z-50'>
-                <span className="dot"></span>
+                <span className="dot sm:visible invisible"></span>
               </div>
             </div>
-            <h1 className="sm:text-8xl text-6xl text-zinc-800 relative -z-50">Portfolio.</h1>
+            <h1 className="sm:text-8xl text-6xl text-zinc-800 relative -z-50">Portfolio<span className="sm:text-black text-[#FE5B00]">.</span></h1>
             <div>
               <div className="flex justify-between">
               <h2 className="font-semibold sm:text-normal text-xs">Penet William</h2>
@@ -48,26 +50,33 @@ function App() {
         {/* hr section */}
 
           {/* A propos section */}
-          <div className="absolute -z-50 mt-6 grid-cols-1 sm:mx-auto sm:container flex-col sm:justify-around text-gray-300 sm:flex hidden">
-              <h1 className="emptyFont sm:text-9xl text-4xl  sm:mx-36">A propos</h1>
-              <h1 className="emptyFont sm:text-9xl text-4xl sm:mx-36">A propos</h1>
-              <h1 className="emptyFont sm:text-9xl text-4xl sm:mx-36">A propos</h1>
-          </div>
+          <div className="absolute -z-50 m-16 grid-cols-1 sm:mx-auto sm:container flex-col sm:justify-around text-gray-300 sm:flex hidden gap-24">
+                <h1 className="emptyFont sm:text-9xl text-4xl text-zinc-300  sm:mx-36">A propos</h1>
+                <h1 className="emptyFont sm:text-9xl text-4xl text-zinc-300 sm:mx-36">A propos</h1>
+                <h1 className="emptyFont sm:text-9xl text-4xl text-zinc-300  sm:mx-36">A propos</h1>
+                <h1 className="emptyFont sm:text-9xl text-4xl text-zinc-300 sm:mx-36">A propos</h1>
+                <h1 className="emptyFont sm:text-9xl text-4xl text-zinc-300 sm:mx-36">A propos</h1>
 
-          <div className='sm:mt-24 mt-4 sm:mx-auto sm:container flex flex-col sm:flex-row sm:p-0 p-2 sm:justify-around items-center relative z-50'>
-            <div className='flex flex-col gap-6'>
-              <h2 className='sm:text-2xl bg-white p-2 w-fit'><span className='font-bold'>Hello !</span>  Ma spécialité ? Le design & SEO.</h2>
-              <p className='text-left sm:w-2/4 '>Ma mission est de rendre une expérience unique et fluide aux utilisateurs ainsi qu'une compatibilité web et mobile au top pour vos projets.</p>
-              <p className='text-left sm:w-2/4 font-bold'>Au-delà de mon travail sur l'ux/ui design je peux également travailler le référencement naturel de votre site-web.</p>
             </div>
-            <img className="sm:mt-0c mt-6 sm:w-64 w-44 h-auto rounded-full shadow-black shadow-sm" src={PhotoProfil}/>
+
+          <div className='sm:mt-24 mt-4 h-screen sm:mx-auto sm:container mx-2 p-6 flex flex-col sm:flex-row sm:p-0 sm:justify-around items-center relative z-50'>
+            <div className='flex flex-col container mx-auto gap-6'>
+              <div className="container mx-auto flex flex-col gap-12">
+                <h2 className='sm:text-2xl text-xl bg-white p-2 w-fit uppercase'><span className='font-bold'>Hello !</span>  Ma spécialité <span className="font-bold">?</span> Le <span className="font-bold">design</span> & <span className="font-bold">SEO</span>.</h2>
+                <p className='text-base sm:text-xl sm:w-2/4'>Ma mission est de rendre une expérience unique et fluide aux utilisateurs ainsi qu'une compatibilité web et mobile au top pour vos projets.</p>
+                <p className='text-base sm:text-xl sm:w-2/4'>J'accompagne le client dans son projet et déploit leurs sites web ou mobile en ligne grâce aux différents cloud existants (AWS, Hostinger..) </p>
+
+                <p className='text-base sm:text-xl sm:w-2/4 font-bold'>Au-delà de mon travail sur l'ux/ui design je peux également travailler le référencement naturel de votre site-web.</p>
+              </div>
+            </div>
+            <img className="sm:mt-0c mt-6 sm:w-80 w-44 h-auto rounded shadow-black shadow-sm" src={PhotoProfil}/>
           </div>
           {/* A propos section */}
         <Skills/>
+        <Projects/>
       </main>
   
     </>
   );
 }
-
 export default App;

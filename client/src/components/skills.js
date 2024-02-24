@@ -5,6 +5,8 @@ import Html from "../assets/html.png";
 import React from "../assets/react.png";
 import Ts from "../assets/ts.png";
 import Node from "../assets/node.png";
+import Texture from "../assets/texture.jpg";
+
 
 
 
@@ -13,14 +15,14 @@ import Node from "../assets/node.png";
 export default function Skills(){
     return(
         <>
-        <main className="relative bg-gradient-to-b from-black via-neutral-900 to-black h-80 sm:h-screen z-50 mt-16">
-             <div className="absolute -z-50 mt-6 grid-cols-1 sm:mx-auto sm:container flex-col sm:justify-around text-gray-300 sm:flex hidden gap-24">
-                <h1 className="emptyFont sm:text-9xl text-4xl  sm:mx-36">Skills</h1>
-                <h1 className="emptyFont sm:text-9xl text-4xl sm:mx-36">Skills</h1>
-                <h1 className="emptyFont sm:text-9xl text-4xl sm:mx-36">Skills</h1>
-                <h1 className="emptyFont sm:text-9xl text-4xl sm:mx-36">Skills</h1>
+        <main className="relative bg-gradient-to-b from-black via-neutral-900 to-black sm:h-fit z-50 mt-16">
+            <div className="absolute -z-50 m-16 grid-cols-1 sm:mx-auto sm:container flex-col sm:justify-around text-gray-300 sm:flex hidden gap-24">
+                <h1 className="emptyFont sm:text-9xl text-4xl text-zinc-800  sm:mx-36">Skills</h1>
+                <h1 className="emptyFont sm:text-9xl text-4xl text-zinc-800 sm:mx-36">Skills</h1>
+                <h1 className="emptyFont sm:text-9xl text-4xl text-zinc-800  sm:mx-36">Skills</h1>
+                <h1 className="emptyFont sm:text-9xl text-4xl text-zinc-800 sm:mx-36">Skills</h1>
             </div>
-        <div className="hide-scrollbar containerSection2 flex sm:justify-evenly sm:items-center overflow-x-scroll ">{/* Carousel in mobile version */}
+            <div className="hide-scrollbar containerSection2 flex sm:h-screen items-center overflow-x-scroll">{/* Carousel in mobile version */}
                 {/* First block */}
                 <div className="relative p-7 container mx-auto ">
                     <div className="boxContainer duration-0 hover:duration-500 hover:bg-zinc-900 hover:cursor bg-gray-200/10 p-4 rounded-xl ">
@@ -92,6 +94,8 @@ export default function Skills(){
                     </div>
                 </div>
             </div>
+
+        
             {/* Section 2 - End */}
         </main>
         </>
