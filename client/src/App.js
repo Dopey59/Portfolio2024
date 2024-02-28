@@ -5,20 +5,18 @@ import './App.css';
 // import Phone from "../src/assets/phone.jpg";
 
 // import Skills from "./components/skills";
-// import Projects from "./components/projects";
+import Header from "./views/header";
+import About from "./views/about";
+
 
 import withSplashScreen from './components/withSplashScreen';  // Include this line
-
-
 
 function App() {
   return (
     <>
-      <div>
-        <div className='flex items-center justify-center h-screen'>
-          <h1 className="text-6xl">Portfolio 2024</h1>
-        </div>
-      </div>
+     <Header/> 
+     <About/> 
+
     
   
     </>

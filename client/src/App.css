@@ -123,74 +123,62 @@ p {
   }
 }
 
-.a {
+.h {
     -webkit-animation: logo-animate 2s infinite;
     animation:         logo-animate 2s infinite;
     animation-delay: 1.4s;
     color: white;
   }
-  .c {
+  .e {
     -webkit-animation: logo-animate 2s infinite;
     animation:         logo-animate 2s infinite;
     animation-delay: 1.5s;
     color: white;
 
   }
-  .c2 {
+  .l {
     -webkit-animation: logo-animate 2s infinite;
     animation:         logo-animate 2s infinite;
     animation-delay: 1.6s;
     color: white;
   }
-  .e {
+  .l2 {
     -webkit-animation: logo-animate 2s infinite;
     animation:         logo-animate 4s infinite;
     animation-delay: 1.7s;
     color: white;
   }
-  .s {
+  .o {
     -webkit-animation: logo-animate 2s infinite;
     animation:         logo-animate 2s infinite;
     animation-delay: 1.9s;
     color: white;
   }
-  .e2 {
+  .w {
       -webkit-animation: logo-animate 2s infinite;
     animation:         logo-animate 2s infinite;
     animation-delay: 2s;
     color: white;
   }
-  .n {
+  .o2 {
       -webkit-animation: logo-animate 2s infinite;
     animation:         logo-animate 2s infinite;
     animation-delay: 2.1s;
     color: white;
   }
-  .c3 {
+  .r {
       -webkit-animation: logo-animate 2s infinite;
     animation:         logo-animate 2s infinite;
     animation-delay: 2.2s;
     color: white;
   }
-  .o {
+  .l3 {
       -webkit-animation: logo-animate 2s infinite;
     animation:         logo-animate 2s infinite;
     animation-delay: 2.3s;
     color: white;
   }
-  .u {
-    -webkit-animation: logo-animate 2s infinite;
-  animation:         logo-animate 2s infinite;
-  animation-delay: 2.3s;
-  color: white;
-}
-  .r {
-    -webkit-animation: logo-animate 2s infinite;
-  animation:         logo-animate 2s infinite;
-  animation-delay: 2.3s;
-  color: white;
-}
-.s2 {
+  .d {
     -webkit-animation: logo-animate 2s infinite;
   animation:         logo-animate 2s infinite;
   animation-delay: 2.3s;

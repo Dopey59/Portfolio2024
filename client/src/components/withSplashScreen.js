@@ -7,20 +7,19 @@ import 'boxicons'
 function SplashMessage() {
     return (
         <div className='bg-gradient-to-r gap-5 from-black via-neutral-900 to-black flex justify-center items-center h-screen'>
-            <div className=' name sm:text-4xl text-base flex gap-2 absolute'>
-                    <box-icon size="lg" color="orangered" name='loader-alt' animation='spin' ></box-icon>
-                    <span className='a'>A</span>
-                    <span className='c'>C</span>
-                    <span className='c2'>C</span>
+            <div className=' name sm:text-4xl text-2xl flex gap-2 absolute'>
+                <box-icon color='orangered' size='md' name='world' animation='spin' ></box-icon>
+                    <span className='h'>H</span>
                     <span className='e'>E</span>
-                    <span className='s'>S </span>
-                    <span className='e2 ml-3'>E</span>
-                    <span className='n'>N </span>
-                    <span className='c3 ml-3'>C</span>
-                    <span className='o'>O</span>
-                    <span className='u'>U</span>
-                    <span className='r'>R</span>
-                    <span className='s2'>S</span>
+                    <span className='l'>L</span>
+                    <span className='l2'>L</span>
+                    <span className='o'>O </span>
+                    <span className='w ml-3'>W</span>
+                    <span className='o2'>O</span>
+                    <span className='r '>R</span>
+                    <span className='l3'>L</span>
+                    <span className='d'>D</span>
+                   
                 </div>
                 <div className='container'>
                     <div className=' rain grid grid-cols-3 container'>
