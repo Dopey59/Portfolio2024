@@ -1,34 +1,15 @@
+import Nav from '../components/navigation';
+
 export default function Header(){
     return(
         <>
-       <div>
-        <nav className="flex justify-end mx-4 items-center mt-4 gap-2">
-            <div className="bg-[#FF4500] text-orange rounded-full w-4 h-4"></div>
-            <div className="bg-[#FF4500] text-orange rounded-full w-4 h-4"></div>
-            <div className="bg-[#FF4500] text-orange rounded-full w-4 h-4"></div>
-        </nav>
-            <div className='flex items-center flex-col justify-center h-screen'>
-                <div className="flex flex-col">
-                    <h2 className="sm:text-2xl text-xl">Portfolio <span className="text-[#FF4500]">2024</span></h2>
-                    <h1 className="sm:text-6xl text-4xl">William Penet</h1>
-                    <div className="flex items-end justify-end">
-                        <h2 className="sm:text-base text-xs text-black">Front-End - web & mobile.</h2>
-                    </div>
-                </div>
-
-                {/* Navigation */}
-                <div className="flex items-center gap-2 justify-end bottom-3 fixed">
-                    <div className="navbar font-semibold gap-3 text-sm flex items-center p-2 rounded-full text-white bg-black/90 ">
-                        <p className="hover:bg-white button_slide slide_right p-1 rounded-full">A propos</p>
-                        <p className="hover:bg-white button_slide slide_right p-1 rounded-full">Outils</p>
-                        <p className="hover:bg-white button_slide slide_right p-1 rounded-full">Projet</p>
-                        <p className="hover:bg-white button_slide slide_right p-1 rounded-full">Contact</p>
-                    </div>
-                </div>
-                {/* Navigation */}
-
-
+       <div className='sm:bg-gradient-to-r from-black via-neutral-900 to-black sm:h-screen h-96 flex-col sm:flex-row flex items-center justify-center'>
+            <div className="flex flex-col items-center gap-3">
+                <h2 className="sm:text-4xl text-xl sm:text-white">William Penet</h2>
+                <h2 className="sm:text-6xl text-2xl sm:text-white">Développeur Front-End.</h2>
+                <h2 className="sm:text-3xl text-xl font-light text-[#FF4500]">Web & Mobile</h2>
             </div>
+            <Nav/>
         </div>
         </>
     )
