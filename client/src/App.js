@@ -1,25 +1,25 @@
 import './index.css';
 import "./App.css";
 
-
-// import PhotoProfil from "../src/assets/pp.jpg";
-// import Phone from "../src/assets/phone.jpg";
-
-// import Skills from "./components/skills";
-
 import Header from "./views/header";
 import About from "./views/about";
 import Tools from "./views/tools";
+import Project from "./views/projects";
+
 
 import withSplashScreen from './components/withSplashScreen';  // Include this line
+
+import Nav from './components/navigation';
 
 function App() {
   return (
     <>
-    <div className='relative'>
+    <div className=''>
      <Header/> 
      <About/> 
      <Tools/> 
+     <Project/>
+     <Nav/>
     </div>
 
     

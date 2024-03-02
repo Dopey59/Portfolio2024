@@ -3,8 +3,8 @@ import '../card.css';
 export default function Tools(){
     return(
         <>
-         <div className="bg-gradient-to-r from-black mx-auto flex items-center flex-col justify-center via-neutral-900 to-black h-fit sm:h-screen">
-                <h1 className='text-white sm:text-4xl text-2xl text-center sm:mx-6 py-6'>Outils / Compténces</h1>
+         <div id="tools" className="bg-gradient-to-r from-black mx-auto flex items-center flex-col justify-center via-neutral-900 to-black h-fit sm:h-screen">
+                <h1 className='text-orange-600 sm:text-3xl text-2xl text-center sm:mx-6 py-6 '>Outils & Compétences</h1>
                 <div class="ag-courses_box w-full">
                     <div class="ag-courses_item">
                     <a href="#" class="ag-courses-item_link">

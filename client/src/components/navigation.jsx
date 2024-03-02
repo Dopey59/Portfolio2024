@@ -1,16 +1,25 @@
-export default function Navigation(){
-    return(
+import React from 'react';
+
+export default function Navigation() {
+    // Fonction pour gérer le défilement
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+
+    return (
         <>
-        {/* Navigation */}
-        <div className="flex gap-2 bottom-3 justify-center fixed z-50 ">
-            <div className="navbar font-semibold gap-3 justify-center text-sm flex items-center p-2 rounded-full z-50 text-white bg-black/70 ">
-                <p className="button_slide slide_right p-1 rounded-full">A propos</p>
-                <p className="button_slide slide_right p-1 rounded-full">Outils</p>
-                <p className="button_slide slide_right p-1 rounded-full">Projet</p>
-                <p className="button_slide slide_right p-1 rounded-full">Contact</p>
+            <div className="flex gap-2 bottom-3 justify-center fixed w-full">
+                <div className="navbar font-semibold gap-3 text-sm flex p-2 rounded-full z-50 text-white bg-black/70 ">
+                    {/* Les éléments de navigation avec onClick pour défiler vers la section */}
+                    <p onClick={() => scrollToSection('about')} className="button_slide slide_right p-1 rounded-full cursor-pointer">A propos</p>
+                    <p onClick={() => scrollToSection('tools')} className="button_slide slide_right p-1 rounded-full cursor-pointer">Outils</p>
+                    <p onClick={() => scrollToSection('projects')} className="button_slide slide_right p-1 rounded-full cursor-pointer">Projet</p>
+                    <p onClick={() => scrollToSection('contact')} className="button_slide slide_right p-1 rounded-full cursor-pointer">Contact</p>
+                </div>
             </div>
-        </div>
-        {/* Navigation */}
         </>
-    )
+    );
 }
