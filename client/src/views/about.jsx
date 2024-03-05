@@ -4,7 +4,9 @@ import '../components/navigation';
 
 import React, { useState } from 'react';
 
-import Avatar from "../assets/avatar.png"
+import Avatar from "../assets/avatar.png";
+import Graduate from "../assets/graduate.png"
+
 import Video from'../assets/video/particles2.mp4'; 
 
 
@@ -75,7 +77,6 @@ export default function About(){
 
                         <div className="gap-2 flex flex-col sm:hidden">
                             <img src={Avatar} className="w-64 h-64 sm:w-96 sm:h-auto" alt="" />
-                            
                         </div>
                         <div className="hidden sm:flex">
                             <button onClick={showNextElement} className="button-svg" disabled={currentIndex >= 1} >
@@ -88,10 +89,9 @@ export default function About(){
                 {currentIndex === 1 && (
                 <div className="Element2 sm:flex-row flex flex-col sm:justify-around items-center p-4 sm:p-0 h-auto sm:h-screen">
                     <button onClick={showPreviousElement} className="button-svg" disabled={currentIndex <= 0}>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="orangered" width="30" height="30" viewBox="0 0 24 24"><path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path></svg>
-
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="orangered" width="30" height="30" viewBox="0 0 24 24"><path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path></svg>
                     </button>
-                    <div className="flex flex-col items-end 4 gap-5 rounded-2xl shadow-lg bg-gray-500/50">
+                    <div className="flex flex-col items-end 4 gap-5 rounded-2xl shadow-lg bg-gray-700/50 ">
                         <div className="flex flex-col text-white gap-5 p-4 drop-shadow shadow-lg ">
                             <h2 className="sm:text-3xl text-xl font-black text-white">Diplôme</h2>
                             <p className="sm:text-xl text-base sm:font-light">Baccalauréat STI2D - Sciences et technologies de l'industrie et du développement durable.
@@ -111,6 +111,7 @@ export default function About(){
                             </div>
                         </div>
                     </div>
+                            <img src={Graduate} className="w-64 h-64 sm:w-96 sm:h-auto sm:flex hidden" alt="" />
                     <button onClick={showNextElement} className="button-svg" disabled={currentIndex >= 1} >
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="orangered"><path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
                     </button>
