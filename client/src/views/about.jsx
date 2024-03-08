@@ -12,12 +12,13 @@ import Video from'../assets/video/particles2.mp4';
 
 
 export default function About(){
+    
         // État pour suivre l'index de l'élément actuellement affiché
         const [currentIndex, setCurrentIndex] = useState(0);
 
         // Fonction pour afficher l'élément suivant
         const showNextElement = () => {
-            if (currentIndex < 1) { // Supposant que vous avez 3 éléments (0, 1, 2)
+            if (currentIndex < 3) { // Supposant que vous avez 3 éléments (0, 1, 2)
             setCurrentIndex(currentIndex + 1);
             }
         };
@@ -32,91 +33,83 @@ export default function About(){
 
     return(
         <>
-            <div id="about" className="relative sm:h-screen">
-                <video autoPlay="autoplay" loop="loop" muted className="video">
-                    <source src={Video} type="video/mp4"></source>
-                </video>
-                {currentIndex === 0 && (
-                <div className="Element1 sm:flex-row flex flex-col sm:justify-around items-center p-4 sm:p-0 h-auto sm:h-screen">
-                    <div className="hidden sm:flex">
-                        <button onClick={showPreviousElement} className="button-svg" disabled={currentIndex <= 0}>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="orangered" width="30" height="30" viewBox="0 0 24 24"><path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path></svg>
-                        </button>
+            <div id="about" className="noisy bg-black flex justify-center items-center sm:h-screen">
+                
+                <div className="Overflow flex-nowrap">{/* Carousel in mobile version */}
+                 {/* First block */}
+                 <div className="relative sm:p-12 p-7">
+                    <div className="iconElement absolute bg-[#96C67F] p-2 flex sm:top-6 top-2 ml-4 rounded-xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="24" height="24" viewBox="0 0 24 24"><path d="M21 3h-7a2.98 2.98 0 0 0-2 .78A2.98 2.98 0 0 0 10 3H3a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h5.758c.526 0 1.042.214 1.414.586l1.121 1.121c.009.009.021.012.03.021.086.079.182.149.294.196h.002a.996.996 0 0 0 .762 0h.002c.112-.047.208-.117.294-.196.009-.009.021-.012.03-.021l1.121-1.121A2.015 2.015 0 0 1 15.242 20H21a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.758 18H4V5h6c.552 0 1 .449 1 1v12.689A4.032 4.032 0 0 0 8.758 18zM20 18h-4.758c-.799 0-1.584.246-2.242.689V6c0-.551.448-1 1-1h6v13z"></path></svg>
                     </div>
-                    <div className="mobileVersion-Arrow sm:hidden flex w-full items-center justify-between">
-                        <button onClick={showPreviousElement} className="button-svg" disabled={currentIndex <= 0}>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="orangered" width="30" height="30" viewBox="0 0 24 24"><path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path></svg>
-                        </button>
-
-                        <button onClick={showNextElement} className="button-svg" disabled={currentIndex >= 1} >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="orangered"><path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
-                        </button>
-                    </div>
-                    
-                    <div className="flex flex-col items-end sm:w-2/4 gap-5" >
-                    
-                        <div className="flex flex-col gap-5 p-4 shadow-lg bg-gray-700/50 rounded-2xl">
-                            <h2 className="sm:text-3xl text-xl font-black text-white">A propos</h2>
-                            <p className="sm:text-xl text-base sm:font-light text-white ">Ancien conseiller de vente dans le prêt à porter, je me suis reconverti dans le développement web, me spécialisant dans le front end pour les applications web et mobiles.
-                            Ma passion pour l'art, le design et la mode influence profondément mon travail, apportant une touche créative à chaque projet. 
-                            <br /><br />
-                            Sensible à l'écologie et attaché aux valeurs humaines, je mets un point d'honneur à développer des solutions respectueuses
-                            de l'environnement et inclusives. Mon amour pour le contact humain et mon désirse d'aider reflètent dans ma manière
-                            d'interagir avec les clients, visant toujours à offrir un service exceptionnel.
+                    <div className="boxContainer p-4 rounded-xl sm:w-96 w-80 bg-gray-200/50">
+                        <div className="containerElement flex flex-col gap-3 mt-6">
+                            <h1 className=" sm:text-xl gap-6 text-white">#Formation | 2022 - 2024</h1>
+                            <h1 className="font-bold text-2xl sm:text-3xl gap-6">Web@cadémie by Epitech</h1>
+                            <p className=" text-gray-200 ">Ce cursus qui se déroule au sein d'Epitech, une des toutes premières écoles d'informatique de France, bénéficie de ses enseignants et de sa pédagogie innovante reconnue qui favorise
+                                l'auto progression et l'adaptabilité.
+                                <br /><br />
+                                Contenu : Les compétences acquises en première année : HTML5 / CSS3 PHP (Laravel, Symfony) MySQL Javascript (JQuery, NodeJS, React)  (applications mobiles hybrides) Apprentissages connexes (conduite de projets, méthodologies agiles, SEO, spécifications
+                                fonctionnelles, CDC, UX, AI, etc..
                             </p>
-
-                            <div className="sm:flex hidden text-white gap-2">
-                                    <p className="rounded px-2 py-1 border-zinc-600 border-2 bg-gray-700">Altruiste</p>
-                                    <p className="rounded px-2 py-1 border-zinc-600 border-2 bg-gray-700">Jovial</p>
-                                    <p className="rounded px-2 py-1 border-zinc-600 border-2 bg-gray-700">Empathique</p>
-                                    <p className="rounded px-2 py-1 border-zinc-600 border-2 bg-gray-700">Geek</p>
-                                </div>
-                            </div>
-                        </div>
-                        <img src={Avatar} className="w-64 h-64 sm:w-96 sm:h-auto sm:flex hidden" alt="" />
-
-                        <div className="gap-2 flex flex-col sm:hidden">
-                            <img src={Avatar} className="w-64 h-64 sm:w-96 sm:h-auto" alt="" />
-                        </div>
-                        <div className="hidden sm:flex">
-                            <button onClick={showNextElement} className="button-svg" disabled={currentIndex >= 1} >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="orangered"><path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
-                            </button>
                         </div>
                     </div>
-                )}
-
-                {currentIndex === 1 && (
-                <div className="Element2 sm:flex-row flex flex-col sm:justify-around items-center p-4 sm:p-0 h-auto sm:h-screen">
-                    <button onClick={showPreviousElement} className="button-svg" disabled={currentIndex <= 0}>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="orangered" width="30" height="30" viewBox="0 0 24 24"><path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path></svg>
-                    </button>
-                    <div className="flex flex-col items-end 4 gap-5 rounded-2xl shadow-lg bg-gray-700/50 ">
-                        <div className="flex flex-col text-white gap-5 p-4 drop-shadow shadow-lg ">
-                            <h2 className="sm:text-3xl text-xl font-black text-white">Diplôme</h2>
-                            <p className="sm:text-xl text-base sm:font-light">Baccalauréat STI2D - Sciences et technologies de l'industrie et du développement durable.
-                            <br /><br />
-                            Option SIN - systèmes de l'information et du numérique.
-                            <br /><br />
-                            <p>Lycée Léonard De Vinci, Calais.</p>
-                            <br />
-                            <p className="">Obtention : Juin 2016</p>
-                            </p>   
-                            
-                            <div className="sm:flex hidden text-white gap-2">
-                                    <p className="rounded px-2 py-1 border-zinc-600 border-2 bg-gray-700">Altruiste</p>
-                                    <p className="rounded px-2 py-1 border-zinc-600 border-2 bg-gray-700">Jovial</p>
-                                    <p className="rounded px-2 py-1 border-zinc-600 border-2 bg-gray-700">Empathique</p>
-                                    <p className="rounded px-2 py-1 border-zinc-600 border-2 bg-gray-700">Geek</p>
-                            </div>
-                        </div>
-                    </div>
-                            <img src={Graduate} className="w-64 h-64 sm:w-96 sm:h-auto sm:flex hidden" alt="" />
-                    <button onClick={showNextElement} className="button-svg" disabled={currentIndex >= 1} >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="orangered"><path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
-                    </button>
                 </div>
-                )}
+                {/* First block */}
+
+                {/* Second block */}
+                <div className="relative sm:p-12 p-7">
+                    <div className="iconElement absolute bg-[#96C67F] p-2 flex sm:top-6 top-2 ml-4 rounded-xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="24" height="24" viewBox="0 0 24 24"><path d="M21 3h-7a2.98 2.98 0 0 0-2 .78A2.98 2.98 0 0 0 10 3H3a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h5.758c.526 0 1.042.214 1.414.586l1.121 1.121c.009.009.021.012.03.021.086.079.182.149.294.196h.002a.996.996 0 0 0 .762 0h.002c.112-.047.208-.117.294-.196.009-.009.021-.012.03-.021l1.121-1.121A2.015 2.015 0 0 1 15.242 20H21a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.758 18H4V5h6c.552 0 1 .449 1 1v12.689A4.032 4.032 0 0 0 8.758 18zM20 18h-4.758c-.799 0-1.584.246-2.242.689V6c0-.551.448-1 1-1h6v13z"></path></svg>
+                    </div>
+                    <div className="boxContainer p-4 rounded-xl sm:w-96 w-80 bg-gray-200/50">
+                        <div className="containerElement flex flex-col gap-3 mt-6">
+                            <h1 className=" sm:text-xl gap-6 text-white ">#Formation | 2021</h1>
+                            <h1 className="font-bold text-2xl sm:text-3xl gap-6">BGE LITTORAL OPALE</h1>
+                            <p className=" text-gray-200">
+                            Deux modules sont proposés: Gestion financière : Être capable d'établir le budget prévisionnel en appréciant l'ensemble des coûts, des	Revenus, des besoins en financement pour évaluer la rentabilité et la viabilité de l'entreprise.
+                            <br /><br />
+                             Développement par le web : Être capable d'utiliser des techniques de référencement (naturel et payant) de contrôler sa	e-réputation et communiquer sur les réseaux sociaux, d'établir une stratégie e-marketing.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {/* Second block */}
+
+                {/* Third block */}
+                <div className="relative sm:p-12 p-7">
+                    <div className="iconElement absolute bg-[#96C67F] p-2 flex sm:top-6 top-2 ml-4 rounded-xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="24" height="24" viewBox="0 0 24 24"><path d="M21 3h-7a2.98 2.98 0 0 0-2 .78A2.98 2.98 0 0 0 10 3H3a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h5.758c.526 0 1.042.214 1.414.586l1.121 1.121c.009.009.021.012.03.021.086.079.182.149.294.196h.002a.996.996 0 0 0 .762 0h.002c.112-.047.208-.117.294-.196.009-.009.021-.012.03-.021l1.121-1.121A2.015 2.015 0 0 1 15.242 20H21a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.758 18H4V5h6c.552 0 1 .449 1 1v12.689A4.032 4.032 0 0 0 8.758 18zM20 18h-4.758c-.799 0-1.584.246-2.242.689V6c0-.551.448-1 1-1h6v13z"></path></svg>
+                    </div>
+                    <div className="boxContainer p-4 rounded-xl sm:w-96 w-80 bg-gray-200/50">
+                        <div className="containerElement flex flex-col gap-3 mt-6">
+                            <h1 className=" sm:text-xl gap-6 text-white ">#Expérience Pro</h1>
+                            <h1 className="font-bold text-2xl sm:text-3xl gap-6">H&M - Euralille</h1>
+                            <p className=" text-gray-200">
+                            Deux modules sont proposés: Gestion financière : Être capable d'établir le budget prévisionnel en appréciant l'ensemble des coûts, des	Revenus, des besoins en financement pour évaluer la rentabilité et la viabilité de l'entreprise.
+                            <br /><br />
+                             Développement par le web : Être capable d'utiliser des techniques de référencement (naturel et payant) de contrôler sa	e-réputation et communiquer sur les réseaux sociaux, d'établir une stratégie e-marketing.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {/* Third block */}
+                <div className="relative sm:p-12 p-7">
+                    <div className="iconElement absolute bg-[#96C67F] p-2 flex sm:top-6 top-2 ml-4 rounded-xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="24" height="24" viewBox="0 0 24 24"><path d="M21 3h-7a2.98 2.98 0 0 0-2 .78A2.98 2.98 0 0 0 10 3H3a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h5.758c.526 0 1.042.214 1.414.586l1.121 1.121c.009.009.021.012.03.021.086.079.182.149.294.196h.002a.996.996 0 0 0 .762 0h.002c.112-.047.208-.117.294-.196.009-.009.021-.012.03-.021l1.121-1.121A2.015 2.015 0 0 1 15.242 20H21a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.758 18H4V5h6c.552 0 1 .449 1 1v12.689A4.032 4.032 0 0 0 8.758 18zM20 18h-4.758c-.799 0-1.584.246-2.242.689V6c0-.551.448-1 1-1h6v13z"></path></svg>
+                    </div>
+                    <div className="boxContainer p-4 rounded-xl sm:w-96 w-80 bg-gray-200/50">
+                        <div className="containerElement flex flex-col gap-3 mt-6">
+                            <h1 className=" sm:text-xl gap-6 text-white ">#Expérience Pro</h1>
+                            <h1 className="font-bold text-2xl sm:text-3xl gap-6">H&M - Euralille</h1>
+                            <p className=" text-gray-200">
+                            Deux modules sont proposés: Gestion financière : Être capable d'établir le budget prévisionnel en appréciant l'ensemble des coûts, des	Revenus, des besoins en financement pour évaluer la rentabilité et la viabilité de l'entreprise.
+                            <br /><br />
+                             Développement par le web : Être capable d'utiliser des techniques de référencement (naturel et payant) de contrôler sa	e-réputation et communiquer sur les réseaux sociaux, d'établir une stratégie e-marketing.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             </div>
         </>
     )
