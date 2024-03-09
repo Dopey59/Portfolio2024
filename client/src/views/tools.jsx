@@ -3,7 +3,7 @@ import '../card.css';
 export default function Tools(){
     return(
         <>
-         <div id="tools" className="noisy bg-gradient-to-r from-black mx-auto flex items-center flex-col justify-center via-neutral-900 to-black h-fit sm:h-screen">
+         <div id="tools" className="bg-zinc-800 mx-auto flex items-center flex-col justify-center h-fit sm:h-screen">
                 <h2 className='text-orange-600 sm:text-3xl text-2xl text-center sm:mx-6 py-6 '>Outils - Compétences</h2>
                 <div class="ag-courses_box w-full overflow-x-auto sm:overflow-hidden sm:flex-row ">
                     <div class="ag-courses_item">

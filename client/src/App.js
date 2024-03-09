@@ -5,16 +5,16 @@ import Header from "./views/header";
 import About from "./views/about";
 import Tools from "./views/tools";
 import Project from "./views/projects";
+import Nav from './components/navigation';
 
 import AnimatedCursor from "react-animated-cursor"
 import withSplashScreen from './components/withSplashScreen';  // Include this line
 
-import Nav from './components/navigation';
 
 function App() {
   return (
     <>
-    <div>
+    <div className='w-full h-auto'>
       <AnimatedCursor
         innerSize={8}
         outerSize={10}

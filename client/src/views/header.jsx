@@ -4,8 +4,8 @@ import Video from'../assets/video/particles2.mp4';
 export default function Header(){
     return(
         <>
-       <div className='noisy from-black via-neutral-900 to-black h-96 sm:h-screen flex-col sm:flex-row flex items-center justify-center'>
-       <video autoPlay="autoplay" loop="loop" muted className="video">
+       <div className=' relative sm:h-screen h-96 flex items-center mx-auto justify-center'>
+            <video autoPlay="autoplay" loop="loop" muted  className="video">
                 <source src={Video} type="video/mp4"></source>
             </video>
             <div className="flex flex-col items-center gap-3">

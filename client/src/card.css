@@ -122,8 +122,6 @@
   background-color: #4c49ea;
 }
 
-
-
 @media only screen and (max-width: 979px) {
   .ag-courses_item {
     -ms-flex-preferred-size: calc(50% - 30px);

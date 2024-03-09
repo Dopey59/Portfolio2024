@@ -1,15 +1,8 @@
-import "../button.css"
-
+import "../button.css";
 import '../components/navigation';
 
 import React, { useState } from 'react';
-
-import Avatar from "../assets/avatar.png";
-import Graduate from "../assets/graduate.png"
-
-import Video from'../assets/video/particles2.mp4'; 
-
-
+import { QRCodeSVG } from 'qrcode.react';
 
 export default function About(){
     
@@ -30,87 +23,122 @@ export default function About(){
             }
         };
 
-
     return(
         <>
-            <div id="about" className="noisy bg-black flex justify-center items-center sm:h-screen">
-                
-                <div className="Overflow flex-nowrap">{/* Carousel in mobile version */}
-                 {/* First block */}
-                 <div className="relative sm:p-12 p-7">
-                    <div className="iconElement absolute bg-[#96C67F] p-2 flex sm:top-6 top-2 ml-4 rounded-xl">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="24" height="24" viewBox="0 0 24 24"><path d="M21 3h-7a2.98 2.98 0 0 0-2 .78A2.98 2.98 0 0 0 10 3H3a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h5.758c.526 0 1.042.214 1.414.586l1.121 1.121c.009.009.021.012.03.021.086.079.182.149.294.196h.002a.996.996 0 0 0 .762 0h.002c.112-.047.208-.117.294-.196.009-.009.021-.012.03-.021l1.121-1.121A2.015 2.015 0 0 1 15.242 20H21a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.758 18H4V5h6c.552 0 1 .449 1 1v12.689A4.032 4.032 0 0 0 8.758 18zM20 18h-4.758c-.799 0-1.584.246-2.242.689V6c0-.551.448-1 1-1h6v13z"></path></svg>
+
+            <div id="about" className="bg-zinc-900 sm:flex sm:items-center sm:justify-between sm:h-screen">
+
+                <div className="left-block sm:flex-col gap-24 sm:items-start items-center sm:flex hidden sm:translate-x-24 sm:w-2/4 sm:mx-0 mx-4">
+                    <h1 className="sm:text-6xl text-2xl text-white">Ici, vous y trouverez mes <span className="text-orange-600">formations</span> et expériences <span className="text-orange-600">professionnelles</span> les plus récentes.</h1>
+                    <h1 className="text-3xl text-white">"Ma passion pour l'art, le design et la mode influence profondément mon travail, apportant une touche créative à chaque projet"</h1>
+                    <QRCodeSVG className="bg-white rounded p-2"  value="https://portfolio-william-penet-ocnpak67u-dopey59.vercel.app/" />
+                </div>
+
+                <div className="Overflow1 overflow-x-auto flex flex-row sm:flex-col items-end sm:h-screen">
+
+                    <div className="relative sm:p-12  translate-y-24 sm:flex hidden flex-col gap-6">
+                        <box-icon size="45px" color="white" name='hand-up' type='solid' animation='fade-down' ></box-icon>
                     </div>
-                    <div className="boxContainer p-4 rounded-xl sm:w-96 w-80 bg-gray-200/50">
-                        <div className="containerElement flex flex-col gap-3 mt-6">
-                            <h1 className=" sm:text-xl gap-6 text-white">#Formation | 2022 - 2024</h1>
-                            <h1 className="font-bold text-2xl sm:text-3xl gap-6">Web@cadémie by Epitech</h1>
-                            <p className=" text-gray-200 ">Ce cursus qui se déroule au sein d'Epitech, une des toutes premières écoles d'informatique de France, bénéficie de ses enseignants et de sa pédagogie innovante reconnue qui favorise
-                                l'auto progression et l'adaptabilité.
+
+                    <div className="relative p-7 sm:p-12 ">
+                        <div className="iconElement absolute bg-[#FF4500] p-2 flex sm:top-6 top-2 ml-4 rounded-xl">
+                         <box-icon type='solid' color="white" name='graduation'></box-icon>                        
+                        </div>
+                        <div className="boxContainer p-4 rounded-xl sm:w-96 w-80 bg-gray-200/50">
+                            <div className="containerElement flex flex-col gap-3 mt-6">
+                                <h1 className=" sm:text-xl gap-6 text-white">#Formation | 2022 - 2024</h1>
+                                <h1 className="font-bold text-2xl sm:text-3xl gap-6">Web@cadémie by Epitech</h1>
+                                <p className=" text-gray-200 ">Ce cursus qui se déroule au sein d'Epitech, une des toutes premières écoles d'informatique de France, bénéficie de ses enseignants et de sa pédagogie innovante reconnue qui favorise
+                                    l'auto progression et l'adaptabilité.
+                                    <br /><br />
+                                    Les compétences acquises : HTML5 / CSS3, Php, MySQL Javascript (JQuery, NodeJS, React)
+                                     - Conduite de projets, méthodologies agiles, SEO, etc..
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="relative sm:p-12 p-7">
+                        <div className="iconElement absolute bg-[#FF4500] p-2 flex sm:top-6 top-2 ml-4 rounded-xl">
+                            <box-icon type='solid' color="white" name='graduation'></box-icon>                        
+                        </div>
+                        <div className="boxContainer p-4 rounded-xl sm:w-96 w-80 bg-gray-200/50">
+                            <div className="containerElement flex flex-col gap-3 mt-6">
+                                <h1 className=" sm:text-xl gap-6 text-white ">#Formation | 2021</h1>
+                                <h1 className="font-bold text-2xl sm:text-3xl gap-6">BGE LITTORAL OPALE</h1>
+                                <p className=" text-gray-200">
+                                Deux modules sont proposés: Gestion financière : Être capable d'établir le budget prévisionnel en appréciant l'ensemble des coûts, des	Revenus, des besoins en financement pour évaluer la rentabilité et la viabilité de l'entreprise.
                                 <br /><br />
-                                Contenu : Les compétences acquises en première année : HTML5 / CSS3 PHP (Laravel, Symfony) MySQL Javascript (JQuery, NodeJS, React)  (applications mobiles hybrides) Apprentissages connexes (conduite de projets, méthodologies agiles, SEO, spécifications
-                                fonctionnelles, CDC, UX, AI, etc..
-                            </p>
+                                Développement par le web : Être capable d'utiliser des techniques de référencement (naturel et payant) de contrôler sa	e-réputation et communiquer sur les réseaux sociaux, d'établir une stratégie e-marketing.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                {/* First block */}
 
-                {/* Second block */}
-                <div className="relative sm:p-12 p-7">
-                    <div className="iconElement absolute bg-[#96C67F] p-2 flex sm:top-6 top-2 ml-4 rounded-xl">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="24" height="24" viewBox="0 0 24 24"><path d="M21 3h-7a2.98 2.98 0 0 0-2 .78A2.98 2.98 0 0 0 10 3H3a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h5.758c.526 0 1.042.214 1.414.586l1.121 1.121c.009.009.021.012.03.021.086.079.182.149.294.196h.002a.996.996 0 0 0 .762 0h.002c.112-.047.208-.117.294-.196.009-.009.021-.012.03-.021l1.121-1.121A2.015 2.015 0 0 1 15.242 20H21a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.758 18H4V5h6c.552 0 1 .449 1 1v12.689A4.032 4.032 0 0 0 8.758 18zM20 18h-4.758c-.799 0-1.584.246-2.242.689V6c0-.551.448-1 1-1h6v13z"></path></svg>
-                    </div>
-                    <div className="boxContainer p-4 rounded-xl sm:w-96 w-80 bg-gray-200/50">
-                        <div className="containerElement flex flex-col gap-3 mt-6">
-                            <h1 className=" sm:text-xl gap-6 text-white ">#Formation | 2021</h1>
-                            <h1 className="font-bold text-2xl sm:text-3xl gap-6">BGE LITTORAL OPALE</h1>
-                            <p className=" text-gray-200">
-                            Deux modules sont proposés: Gestion financière : Être capable d'établir le budget prévisionnel en appréciant l'ensemble des coûts, des	Revenus, des besoins en financement pour évaluer la rentabilité et la viabilité de l'entreprise.
-                            <br /><br />
-                             Développement par le web : Être capable d'utiliser des techniques de référencement (naturel et payant) de contrôler sa	e-réputation et communiquer sur les réseaux sociaux, d'établir une stratégie e-marketing.
-                            </p>
+                    <div className="relative sm:p-12 p-7">
+                        <div className="iconElement absolute bg-[#FF4500] p-2 flex sm:top-6 top-2 ml-4 rounded-xl">
+                            <box-icon type='solid' color="white" name='briefcase'></box-icon>                        
+                        </div>
+                        <div className="boxContainer p-4 rounded-xl sm:w-96 w-80 bg-gray-200/50">
+                            <div className="containerElement flex flex-col gap-3 mt-6">
+                                <h1 className=" sm:text-xl gap-6 text-white ">#Expérience Pro</h1>
+                                <h1 className="font-bold text-2xl sm:text-3xl gap-6">Entrepreneur e-commerce</h1>
+                                <p className=" text-gray-200">
+                                Street n Old est une Friperie en ligne d'origine Française spécialisée dans le prêt-à-porter vintage streetwear où le but est de rendre la mode accessible à tous.
+                                <br /><br />
+                                Nous accordons une importance capitale aux pratiques éco-responsables, qui constituent l'une des valeurs fondamentales de la marque. 
+                                
+                                Les étiquettes par exemple, sont fabriquées à partir de cartons recyclés et les ficelles en toile de jute.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                {/* Second block */}
 
-                {/* Third block */}
-                <div className="relative sm:p-12 p-7">
-                    <div className="iconElement absolute bg-[#96C67F] p-2 flex sm:top-6 top-2 ml-4 rounded-xl">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="24" height="24" viewBox="0 0 24 24"><path d="M21 3h-7a2.98 2.98 0 0 0-2 .78A2.98 2.98 0 0 0 10 3H3a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h5.758c.526 0 1.042.214 1.414.586l1.121 1.121c.009.009.021.012.03.021.086.079.182.149.294.196h.002a.996.996 0 0 0 .762 0h.002c.112-.047.208-.117.294-.196.009-.009.021-.012.03-.021l1.121-1.121A2.015 2.015 0 0 1 15.242 20H21a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.758 18H4V5h6c.552 0 1 .449 1 1v12.689A4.032 4.032 0 0 0 8.758 18zM20 18h-4.758c-.799 0-1.584.246-2.242.689V6c0-.551.448-1 1-1h6v13z"></path></svg>
-                    </div>
-                    <div className="boxContainer p-4 rounded-xl sm:w-96 w-80 bg-gray-200/50">
-                        <div className="containerElement flex flex-col gap-3 mt-6">
-                            <h1 className=" sm:text-xl gap-6 text-white ">#Expérience Pro</h1>
-                            <h1 className="font-bold text-2xl sm:text-3xl gap-6">H&M - Euralille</h1>
-                            <p className=" text-gray-200">
-                            Deux modules sont proposés: Gestion financière : Être capable d'établir le budget prévisionnel en appréciant l'ensemble des coûts, des	Revenus, des besoins en financement pour évaluer la rentabilité et la viabilité de l'entreprise.
-                            <br /><br />
-                             Développement par le web : Être capable d'utiliser des techniques de référencement (naturel et payant) de contrôler sa	e-réputation et communiquer sur les réseaux sociaux, d'établir une stratégie e-marketing.
-                            </p>
+                    <div className="relative sm:p-12 p-7">
+                        <div className="iconElement absolute bg-[#FF4500] p-2 flex sm:top-6 top-2 ml-4 rounded-xl">
+                            <box-icon type='solid' color="white" name='briefcase'></box-icon>                        
+                        </div>
+                        <div className="boxContainer p-4 rounded-xl sm:w-96 w-80 bg-gray-200/50">
+                            <div className="containerElement flex flex-col gap-3 mt-6">
+                                <h1 className=" sm:text-xl gap-6 text-white ">#Expérience Pro</h1>
+                                <h1 className="font-bold text-2xl sm:text-3xl gap-6">Foot Locker - Coquelles (62)</h1>
+                                <p className=" text-gray-200">
+                                    En tant que vendeur chez Foot Locker, mes responsabilités incluaient l'accueil et le guidage des clients dans leur processus de sélection, jusqu'à la finalisation de leur achat. De plus, la gestion et l'organisation des stocks représentaient une part significative de mes tâches, en parallèle avec la promotion de ventes additionnelles.                                <br /><br />
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                {/* Third block */}
-                <div className="relative sm:p-12 p-7">
-                    <div className="iconElement absolute bg-[#96C67F] p-2 flex sm:top-6 top-2 ml-4 rounded-xl">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="24" height="24" viewBox="0 0 24 24"><path d="M21 3h-7a2.98 2.98 0 0 0-2 .78A2.98 2.98 0 0 0 10 3H3a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h5.758c.526 0 1.042.214 1.414.586l1.121 1.121c.009.009.021.012.03.021.086.079.182.149.294.196h.002a.996.996 0 0 0 .762 0h.002c.112-.047.208-.117.294-.196.009-.009.021-.012.03-.021l1.121-1.121A2.015 2.015 0 0 1 15.242 20H21a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.758 18H4V5h6c.552 0 1 .449 1 1v12.689A4.032 4.032 0 0 0 8.758 18zM20 18h-4.758c-.799 0-1.584.246-2.242.689V6c0-.551.448-1 1-1h6v13z"></path></svg>
-                    </div>
-                    <div className="boxContainer p-4 rounded-xl sm:w-96 w-80 bg-gray-200/50">
-                        <div className="containerElement flex flex-col gap-3 mt-6">
-                            <h1 className=" sm:text-xl gap-6 text-white ">#Expérience Pro</h1>
-                            <h1 className="font-bold text-2xl sm:text-3xl gap-6">H&M - Euralille</h1>
-                            <p className=" text-gray-200">
-                            Deux modules sont proposés: Gestion financière : Être capable d'établir le budget prévisionnel en appréciant l'ensemble des coûts, des	Revenus, des besoins en financement pour évaluer la rentabilité et la viabilité de l'entreprise.
-                            <br /><br />
-                             Développement par le web : Être capable d'utiliser des techniques de référencement (naturel et payant) de contrôler sa	e-réputation et communiquer sur les réseaux sociaux, d'établir une stratégie e-marketing.
-                            </p>
+
+                    <div className="relative sm:p-12 p-7">
+                        <div className="iconElement absolute bg-[#FF4500] p-2 flex sm:top-6 top-2 ml-4 rounded-xl">
+                            <box-icon type='solid' color="white" name='briefcase'></box-icon>                        
+                        </div>
+                        <div className="boxContainer p-4 rounded-xl sm:w-96 w-80 bg-gray-200/50">
+                            <div className="containerElement flex flex-col gap-3 mt-6">
+                                <h1 className=" sm:text-xl gap-6 text-white ">#Expérience Pro</h1>
+                                <h1 className="font-bold text-2xl sm:text-3xl gap-6">La Botte Chantilly - Lille</h1>
+                                <p className=" text-gray-200">
+                                Mon expérience au sein de cette entreprise familiale, spécialisée dans les chaussures de milieu et haut de gamme, a été extrêmement enrichissante. Elle m'a permis de renforcer mes compétences en tant que conseiller de vente, en offrant une guidance tant sur le plan médical – en sélectionnant des chaussures adaptées aux besoins spécifiques de chaque client – que sur le plan esthétique.                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
+
+                    <div className="relative sm:p-12 p-7">
+                        <div className="iconElement absolute bg-[#FF4500] p-2 flex sm:top-6 top-2 ml-4 rounded-xl">
+                            <box-icon type='solid' color="white" name='briefcase'></box-icon>                        
+                        </div>
+                        <div className="boxContainer p-4 rounded-xl sm:w-96 w-80 bg-gray-200/50">
+                            <div className="containerElement flex flex-col gap-3 mt-6">
+                                <h1 className=" sm:text-xl gap-6 text-white ">#Expérience Pro</h1>
+                                <h1 className="font-bold text-2xl sm:text-3xl gap-6">H&M Euralille</h1>
+                                <p className=" text-gray-200">
+                                Au sein d'H&M, j'étais chargé de diverses tâches, notamment l'étiquetage et le scannage des articles. Je m'occupais également du réapprovisionnement des stocks et du placement des articles en rayon, une activité communément appelée "facing", qui faisait partie intégrante de mon quotidien.                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
             </div>
-            </div>
+        </div>
         </>
     )
 }
