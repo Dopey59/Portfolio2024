@@ -23,20 +23,22 @@ export default function About(){
             }
         };
 
+        const email = "penet.william@gmail.com";
+        const mailtoString = `mailto:${email}`;
+
     return(
         <>
 
             <div id="about" className="bg-zinc-900 sm:flex sm:items-center sm:justify-between sm:h-screen">
 
-                <div className="left-block sm:flex-col gap-24 sm:items-start items-center sm:flex hidden sm:translate-x-24 sm:w-2/4 sm:mx-0 mx-4">
-                    <h1 className="sm:text-6xl text-2xl text-white">Ici, vous y trouverez mes <span className="text-orange-600">formations</span> et expériences <span className="text-orange-600">professionnelles</span> les plus récentes.</h1>
-                    <h1 className="text-3xl text-white">"Ma passion pour l'art, le design et la mode influence profondément mon travail, apportant une touche créative à chaque projet"</h1>
-                    <QRCodeSVG className="bg-white rounded p-2"  value="https://portfolio-william-penet-ocnpak67u-dopey59.vercel.app/" />
+                <div className="left-block lg:flex-col gap-24 lg:items-start items-center lg:flex hidden sm:translate-x-24 sm:w-2/4 md:mx-0 mx-4">
+                    <h1 className="xl:text-6xl text-4xl text-white">Ici, vous y trouverez mes <span className="text-orange-600">formations</span> et expériences <span className="text-orange-600">professionnelles</span> les plus récentes.</h1>
+                    <h1 className="xl:text-3xl text-3xl text-white">"Ma passion pour l'art, le design et la mode influence profondément mon travail, apportant une touche créative à chaque projet"</h1>
                 </div>
 
-                <div className="Overflow1 overflow-x-auto flex flex-row sm:flex-col items-end sm:h-screen">
+                <div className="Overflow1 overflow-x-scroll flex  lg:flex-col items-end lg:h-screen">
 
-                    <div className="relative sm:p-12  translate-y-24 sm:flex hidden flex-col gap-6">
+                    <div className="relative sm:p-12  translate-y-24 lg:flex hidden flex-col gap-6">
                         <box-icon size="45px" color="white" name='hand-up' type='solid' animation='fade-down' ></box-icon>
                     </div>
 
