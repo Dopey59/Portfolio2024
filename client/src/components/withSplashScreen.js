@@ -6,7 +6,7 @@ import 'boxicons'
 
 function SplashMessage() {
     return (
-        <div id="splashscreen" className='noisy bg-black justify-center flex h-screen'>
+        <div className='noisy bg-black justify-center flex h-screen'>
             <div className='name sm:text-2xl items-center text-2xl flex'>
                 <box-icon color='orangered' size='sm' name='loader-alt' animation='spin'/>
                 <span className='h'>C</span>
@@ -47,7 +47,7 @@ export default function withSplashScreen(WrappedComponent) {
                         loading: false,
                         fade:true,
                     });
-                }, 1500)
+                }, 3000)
             } catch (err) {
                 console.log(err);
                 this.setState({
