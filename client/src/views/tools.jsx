@@ -76,7 +76,8 @@ export default function Tools(){
                         <div class="ag-courses-item_bg"></div>
 
                         <div class="ag-courses-item_title">
-                        Déploiement/Hébergement site web
+                        Déploiement &
+                        Hébergement 
                         </div>
 
                         <div class="ag-courses-item_date-box">

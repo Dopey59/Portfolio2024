@@ -47,11 +47,6 @@
   	scrollbar-color: #fe5b00 #0000; /* Couleur de la poignée et de la piste */
 }
 
-/* Personnaliser la scrollbar pour tout le document */
-.Overflow2::-webkit-scrollbar {
-    width: 50px; /* Largeur de la scrollbar */
-}
-
 /* Poignée de la scrollbar */
 .Overflow2::-webkit-scrollbar-thumb {
     background: #fe5b00; /* Couleur de la poignée */
