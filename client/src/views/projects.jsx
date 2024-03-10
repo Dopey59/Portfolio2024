@@ -19,12 +19,12 @@ export default function Projects() {
 
     return(
         <>
-        <div id="projects" className="relative noisy sm:h-screen">
+        <div id="projects" className="relative noisy h-screen">
             <video autoPlay="autoplay" loop="loop" muted className="video">
                 <source src={Video} type="video/mp4"></source>
             </video>
-            <div className="mainContainer sm:grid sm:grid-cols-2 flex flex-col items-center sm:mx-10 ">
-                <div className="elementContainer flex flex-col gap-6 h-[30rem] w-fit text-gray-400">
+            <div className="mainContainer sm:grid sm:grid-cols-2 flex flex-col items-center mx-10 sm:mx-10 ">
+                <div className="elementContainer flex flex-col gap-6 w-fit text-gray-400">
                     <h2 className="text-orange-600 text-3xl mt-6 font-black">Projets réalisés</h2>
 
                     <div className=""
@@ -34,40 +34,46 @@ export default function Projects() {
                         <p className="font-light">Projet personnel</p>
                     </div>
                     <span className='border-1 border-b border-gray-500'></span>
+                    <a href='https://www.shift-gaming.fr/' target='_blank'>
+                        <div className=""
+                            onMouseEnter={() => setShowImage1(true)}
+                            onMouseLeave={() => setShowImage1(false)}>
+                            <p className="sm:text-2xl font duration-0 hover:duration-500 hover:text-white ">Shift Gaming</p>
+                            <p className="font-light">Projet personnel</p>
+                        </div>
+                    </a>
+                        <span className='border-1 border-b border-gray-500'></span>
 
-                    <div className=""
-                        onMouseEnter={() => setShowImage1(true)}
-                        onMouseLeave={() => setShowImage1(false)}>
-                        <p className="sm:text-2xl font duration-0 hover:duration-500 hover:text-white ">Shift Gaming</p>
-                        <p className="font-light">Projet personnel</p>
-                    </div>
-
-                    <span className='border-1 border-b border-gray-500'></span>
-
-                    <div className=""
-                        onMouseEnter={() => setShowImage2(true)}
-                        onMouseLeave={() => setShowImage2(false)}>
-                        <p className="sm:text-2xl font duration-0 hover:duration-500 hover:text-white">Previously On</p>
-                        <p className="font-light">Projet scolaire</p>
-                    </div>
-
-                    <span className='border-1 border-b border-gray-500'></span>
-
-                    <div className=""
-                        onMouseEnter={() => setShowImage3(true)}
-                        onMouseLeave={() => setShowImage3(false)}>
-                        <p className="sm:text-2xl font duration-0 hover:duration-500 hover:text-white">Twitter - Clone</p>
-                        <p className="font-light">Projet scolaire</p>
-                    </div>
+                    <a href="https://github.com/Dopey59/Previously-On.git" target='_blank'>
+                        <div className=""
+                            onMouseEnter={() => setShowImage2(true)}
+                            onMouseLeave={() => setShowImage2(false)}>
+                            <p className="sm:text-2xl font duration-0 hover:duration-500 hover:text-white">Previously On</p>
+                            <p className="font-light">Projet scolaire</p>
+                        </div>
+                    </a>
 
                     <span className='border-1 border-b border-gray-500'></span>
 
-                    <div className=""
-                        onMouseEnter={() => setShowImage4(true)}
-                        onMouseLeave={() => setShowImage4(false)}>
-                        <p className="sm:text-2xl font duration-0 hover:duration-500 hover:text-white">E-commerce</p>
-                        <p className="font-light ">Projet scolaire</p>
-                    </div>
+                    <a href="https://github.com/Dopey59/My-Twitter.git" target='_blank'>
+                        <div className=""
+                            onMouseEnter={() => setShowImage3(true)}
+                            onMouseLeave={() => setShowImage3(false)}>
+                            <p className="sm:text-2xl font duration-0 hover:duration-500 hover:text-white">Twitter - Clone</p>
+                            <p className="font-light">Projet scolaire</p>
+                        </div>
+                    </a>
+
+                    <span className='border-1 border-b border-gray-500'></span>
+
+                    <a href="https://github.com/EpitechWebAcademiePromo2024/W-WEB-502-LIL-2-1-ecommerce-lucas.pesse.git" target='_blank'>
+                        <div className=""
+                            onMouseEnter={() => setShowImage4(true)}
+                            onMouseLeave={() => setShowImage4(false)}>
+                            <p className="sm:text-2xl font duration-0 hover:duration-500 hover:text-white">E-commerce</p>
+                            <p className="font-light ">Projet scolaire</p>
+                        </div>
+                    </a>
 
                     <span className='border-1 border-b border-gray-500'></span>
 

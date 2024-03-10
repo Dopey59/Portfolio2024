@@ -46,7 +46,7 @@ export default function About(){
                         <div className="iconElement absolute bg-[#FF4500] p-2 flex sm:top-6 top-2 ml-4 rounded-xl">
                          <box-icon type='solid' color="white" name='graduation'></box-icon>                        
                         </div>
-                        <div className="boxContainer p-4 rounded-xl sm:w-96 w-80 bg-gray-200/50">
+                        <div className="boxContainer Overflow2   p-4 rounded-xl  sm:max-w-80 w-80 max-h-96 overflow-y-scroll  bg-gray-200/50">
                             <div className="containerElement flex flex-col gap-3 mt-6">
                                 <h1 className=" sm:text-xl gap-6 text-white">#Formation | 2022 - 2024</h1>
                                 <h1 className="font-bold text-2xl sm:text-3xl gap-6">Web@cadémie by Epitech</h1>
@@ -64,7 +64,7 @@ export default function About(){
                         <div className="iconElement absolute bg-[#FF4500] p-2 flex sm:top-6 top-2 ml-4 rounded-xl">
                             <box-icon type='solid' color="white" name='graduation'></box-icon>                        
                         </div>
-                        <div className="boxContainer p-4 rounded-xl sm:w-96 w-80 bg-gray-200/50">
+                        <div className="boxContainer Overflow2   p-4 rounded-xl  sm:max-w-80 w-80 max-h-96 overflow-y-scroll  bg-gray-200/50">
                             <div className="containerElement flex flex-col gap-3 mt-6">
                                 <h1 className=" sm:text-xl gap-6 text-white ">#Formation | 2021</h1>
                                 <h1 className="font-bold text-2xl sm:text-3xl gap-6">BGE LITTORAL OPALE</h1>
@@ -81,7 +81,7 @@ export default function About(){
                         <div className="iconElement absolute bg-[#FF4500] p-2 flex sm:top-6 top-2 ml-4 rounded-xl">
                             <box-icon type='solid' color="white" name='briefcase'></box-icon>                        
                         </div>
-                        <div className="boxContainer p-4 rounded-xl sm:w-96 w-80 bg-gray-200/50">
+                        <div className="boxContainer Overflow2   p-4 rounded-xl  sm:max-w-80 w-80 max-h-96 overflow-y-scroll  bg-gray-200/50">
                             <div className="containerElement flex flex-col gap-3 mt-6">
                                 <h1 className=" sm:text-xl gap-6 text-white ">#Expérience Pro</h1>
                                 <h1 className="font-bold text-2xl sm:text-3xl gap-6">Entrepreneur e-commerce</h1>
@@ -100,7 +100,7 @@ export default function About(){
                         <div className="iconElement absolute bg-[#FF4500] p-2 flex sm:top-6 top-2 ml-4 rounded-xl">
                             <box-icon type='solid' color="white" name='briefcase'></box-icon>                        
                         </div>
-                        <div className="boxContainer p-4 rounded-xl sm:w-96 w-80 bg-gray-200/50">
+                        <div className="boxContainer Overflow2   p-4 rounded-xl  sm:max-w-80 w-80 max-h-96 overflow-y-scroll  bg-gray-200/50">
                             <div className="containerElement flex flex-col gap-3 mt-6">
                                 <h1 className=" sm:text-xl gap-6 text-white ">#Expérience Pro</h1>
                                 <h1 className="font-bold text-2xl sm:text-3xl gap-6">Foot Locker - Coquelles (62)</h1>
@@ -115,7 +115,7 @@ export default function About(){
                         <div className="iconElement absolute bg-[#FF4500] p-2 flex sm:top-6 top-2 ml-4 rounded-xl">
                             <box-icon type='solid' color="white" name='briefcase'></box-icon>                        
                         </div>
-                        <div className="boxContainer p-4 rounded-xl sm:w-96 w-80 bg-gray-200/50">
+                        <div className="boxContainer Overflow2   p-4 rounded-xl  sm:max-w-80 w-80 max-h-96 overflow-y-scroll  bg-gray-200/50">
                             <div className="containerElement flex flex-col gap-3 mt-6">
                                 <h1 className=" sm:text-xl gap-6 text-white ">#Expérience Pro</h1>
                                 <h1 className="font-bold text-2xl sm:text-3xl gap-6">La Botte Chantilly - Lille</h1>
@@ -129,12 +129,13 @@ export default function About(){
                         <div className="iconElement absolute bg-[#FF4500] p-2 flex sm:top-6 top-2 ml-4 rounded-xl">
                             <box-icon type='solid' color="white" name='briefcase'></box-icon>                        
                         </div>
-                        <div className="boxContainer p-4 rounded-xl sm:w-96 w-80 bg-gray-200/50">
+                        <div className="boxContainer Overflow1  p-4 rounded-xl  sm:max-w-80 w-80 max-h-96 overflow-y-scroll  bg-gray-200/50">
                             <div className="containerElement flex flex-col gap-3 mt-6">
                                 <h1 className=" sm:text-xl gap-6 text-white ">#Expérience Pro</h1>
                                 <h1 className="font-bold text-2xl sm:text-3xl gap-6">H&M Euralille</h1>
                                 <p className=" text-gray-200">
-                                Au sein d'H&M, j'étais chargé de diverses tâches, notamment l'étiquetage et le scannage des articles. Je m'occupais également du réapprovisionnement des stocks et du placement des articles en rayon, une activité communément appelée "facing", qui faisait partie intégrante de mon quotidien.                                    
+                                Au sein d'H&M, j'étais chargé de diverses tâches, notamment l'étiquetage et le scannage des articles. Je m'occupais également du réapprovisionnement des stocks et du placement des articles en rayon, une activité communément appelée "facing", qui faisait partie intégrante de mon quotidien.
+                                Une de mes premières expériences en tant que conseiller de  vente qui m'a marqué.                             
                                 </p>
                             </div>
                         </div>
