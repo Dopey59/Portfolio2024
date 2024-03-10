@@ -6,10 +6,19 @@ import About from "./views/about";
 import Tools from "./views/tools";
 import Project from "./views/projects";
 import Nav from './components/navigation';
+import Contact from './components/footer';
+
 
 import AnimatedCursor from "react-animated-cursor"
 import withSplashScreen from './components/withSplashScreen';  // Include this line
 
+let docTitle = document.title;
+window.addEventListener("blur", () => {
+  document.title = "Revenez 😥";
+})
+window.addEventListener("focus", () =>{
+  document.title = docTitle;
+})
 
 function App() {
   return (
@@ -52,6 +61,7 @@ function App() {
      <Tools/> 
      <Project/>
      <Nav/>
+     <Contact/>
     </div>
     </>
   );

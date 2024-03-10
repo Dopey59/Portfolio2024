@@ -32,44 +32,36 @@ function SplashMessage() {
 
 export default function withSplashScreen(WrappedComponent) {
     return class extends Component {
-      constructor(props) {
-        super(props);
-        this.state = {
-          loading: true,
-          fadeOut: false, // Ajoutez l'état fadeOut pour contrôler l'animation
-        };
-      }
-  
-      async componentDidMount() {
-        try {
-          // Supposons que votre splash screen dure 3500ms
-          setTimeout(() => {
-            this.setState({ fadeOut: true }); // Commence l'animation de fade out
-  
-            // Configurez un autre timeout pour changer l'état de loading après la durée de l'animation
-            setTimeout(() => {
-              this.setState({ loading: false });
-            }, 3000); // La durée de l'animation CSS fade-exit est de 3s
-          }, 3500);
-        } catch (err) {
-          console.log(err);
-          this.setState({ loading: false });
+        constructor(props) {
+            super(props);
+            this.state = {
+                loading: true,
+            };
         }
-      }
-  
-      render() {
-        const { loading, fadeOut } = this.state;
-  
-        // Appliquez la classe fade-out si fadeOut est true
-        const splashClass = fadeOut ? 'noisy bg-black justify-center flex h-screen fade-out' : 'noisy bg-black justify-center flex h-screen';
-  
-        if (loading) {
-          // Rendu conditionnel du SplashMessage avec les classes dynamiques
-          return <div id="splashscreen" className={splashClass}>{SplashMessage()}</div>;
+
+        async componentDidMount() {
+            try {
+                // Put here your await requests/ API requests
+                setTimeout(() => {
+                    this.setState({
+                        loading: false,
+                        fade:true,
+                    });
+                }, 1500)
+            } catch (err) {
+                console.log(err);
+                this.setState({
+                    loading: false,
+                });
+            }
         }
-  
-        // Une fois le loading terminé, affichez le composant enveloppé
-        return <WrappedComponent {...this.props} />;
-      }
+
+        render() {
+            // while checking user session, show "loading" message
+            if (this.state.loading) return SplashMessage();
+
+            // otherwise, show the desired route
+            return <WrappedComponent {...this.props} />;
+        }
     };
-  }
+}

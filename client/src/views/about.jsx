@@ -1,6 +1,8 @@
 import "../button.css";
 import '../components/navigation';
 
+import Arrow from '../assets/arrow.png'
+
 import React, { useState } from 'react';
 import { QRCodeSVG } from 'qrcode.react';
 
@@ -34,6 +36,15 @@ export default function About(){
                 <div className="left-block lg:flex-col gap-24 lg:items-start items-center lg:flex hidden sm:translate-x-24 sm:w-2/4 md:mx-0 mx-4">
                     <h1 className="xl:text-6xl text-4xl text-white">Ici, vous y trouverez mes <span className="text-orange-600">formations</span> et expériences <span className="text-orange-600">professionnelles</span> les plus récentes.</h1>
                     <h1 className="xl:text-3xl text-3xl text-white">"Ma passion pour l'art, le design et la mode influence profondément mon travail, apportant une touche créative à chaque projet"</h1>
+                    
+                    <div className="flex  gap-3 items-center">
+                        <QRCodeSVG value="https://drive.google.com/uc?export=download&id=1eWAZ57XMLyc95gFFx-hv4pfzcIIBqFne" />
+                        <div className="flex items-center gap-1">
+                            <box-icon size="30x" color="orangered" name='scan' type='solid'></box-icon>
+                            <p className="text-white">Télécharger le CV</p>
+                        </div>
+                    </div>
+
                 </div>
 
                 <div className="Overflow1 overflow-x-scroll flex  lg:flex-col items-end lg:h-screen">
@@ -115,7 +126,7 @@ export default function About(){
                         <div className="iconElement absolute bg-[#FF4500] p-2 flex sm:top-6 top-2 ml-4 rounded-xl">
                             <box-icon type='solid' color="white" name='briefcase'></box-icon>                        
                         </div>
-                        <div className="boxContainer Overflow2   p-4 rounded-xl  sm:max-w-80 w-80 max-h-96 overflow-y-scroll  bg-gray-200/50">
+                        <div className="boxContainer Overflow2 p-4 rounded-xl sm:max-w-80 w-80 max-h-96 overflow-y-scroll  bg-gray-200/50">
                             <div className="containerElement flex flex-col gap-3 mt-6">
                                 <h1 className=" sm:text-xl gap-6 text-white ">#Expérience Pro</h1>
                                 <h1 className="font-bold text-2xl sm:text-3xl gap-6">La Botte Chantilly - Lille</h1>
@@ -129,7 +140,7 @@ export default function About(){
                         <div className="iconElement absolute bg-[#FF4500] p-2 flex sm:top-6 top-2 ml-4 rounded-xl">
                             <box-icon type='solid' color="white" name='briefcase'></box-icon>                        
                         </div>
-                        <div className="boxContainer Overflow1  p-4 rounded-xl  sm:max-w-80 w-80 max-h-96 overflow-y-scroll  bg-gray-200/50">
+                        <div className="boxContainer Overflow2 p-4 rounded-xl sm:max-w-80 w-80 max-h-96 overflow-y-scroll bg-gray-200/50">
                             <div className="containerElement flex flex-col gap-3 mt-6">
                                 <h1 className=" sm:text-xl gap-6 text-white ">#Expérience Pro</h1>
                                 <h1 className="font-bold text-2xl sm:text-3xl gap-6">H&M Euralille</h1>
