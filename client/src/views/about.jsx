@@ -38,7 +38,8 @@ export default function About(){
                     <h1 className="xl:text-3xl text-3xl text-white">"Ma passion pour l'art, le design et la mode influence profondément mon travail, apportant une touche créative à chaque projet"</h1>
                     
                     <div className="flex  gap-3 items-center">
-                        <QRCodeSVG value="https://drive.google.com/uc?export=download&id=1eWAZ57XMLyc95gFFx-hv4pfzcIIBqFne" />
+                        <QRCodeSVG value="https://drive.google.com/uc?export=download&id=1B5JDUpBgPf19FJHtXDw8VC2BMz_ohxZX"/>
+                        
                         <div className="flex items-center gap-1">
                             <box-icon size="30x" color="orangered" name='scan' type='solid'></box-icon>
                             <p className="text-white">Télécharger le CV</p>
