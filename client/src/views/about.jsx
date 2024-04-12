@@ -38,7 +38,7 @@ export default function About(){
                     <h1 className="xl:text-3xl text-3xl text-white">"Ma passion pour l'art, le design et la mode influence profondément mon travail, apportant une touche créative à chaque projet"</h1>
                     
                     <div className="flex  gap-3 items-center">
-                        <QRCodeSVG value="https://drive.google.com/uc?export=download&id=1B5JDUpBgPf19FJHtXDw8VC2BMz_ohxZX"/>
+                        <QRCodeSVG value="https://drive.google.com/uc?export=download&id=1h9iVe5ABtO_SKcYEXRaiIDmeyCuCuQ7Z"/>
                         
                         <div className="flex items-center gap-1">
                             <box-icon size="30x" color="orangered" name='scan' type='solid'></box-icon>
@@ -54,7 +54,7 @@ export default function About(){
                         <box-icon size="45px" color="white" name='hand-up' type='solid' animation='fade-down' ></box-icon>
                     </div>
 
-                    <div className="relative p-7 sm:p-12 ">
+                    <div className="relative p-7 sm:p-12 mx-14 sm:mx-auto">
                         <div className="iconElement absolute bg-[#FF4500] p-2 flex sm:top-6 top-2 ml-4 rounded-xl">
                          <box-icon type='solid' color="white" name='graduation'></box-icon>                        
                         </div>
