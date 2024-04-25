@@ -36,11 +36,14 @@ export default function About(){
                 <Fade direction="up" delay="10">
                     <h1 className="text-2xl">Ici, vous y trouverez mes <span className="">formations</span> et expériences <span className="">professionnelles</span> les plus récentes.</h1>
                     <h2 className="text-base">"Ma passion pour l'art, le design et la mode influence profondément mon travail, apportant une touche créative à chaque projet"</h2>
-                    <div className="flex gap-12 mx-4 ">
-                        <div className="flex justify-between items-center gap-3">
-                            <QRCodeSVG className="w-24 h-24"  value="https://drive.google.com/uc?export=download&id=1h9iVe5ABtO_SKcYEXRaiIDmeyCuCuQ7Z"/>
-                            <box-icon size="20px" color="blue" name='scan' type='solid'></box-icon>
-                            <p className="text-sm">Télécharger le CV</p>
+                    <div className="flex flex-col items-center gap-3 ">
+                        <h1>Pour un stage :</h1>
+                        <div className="items-center gap-3 text-blue-600 bg-white p-2 rounded">
+                            <a href="https://drive.google.com/file/d/1W5f8S2-HGviFz8daartcpnyEYyMDF_i5/view?usp=drive_link" download="cv">Télécharger le CV</a>
+                        </div>
+                        <h1>Pour un CDD / CDI :</h1>
+                        <div className="items-center gap-3 text-blue-600 bg-white p-2 rounded">
+                            <a href="https://drive.google.com/file/d/13RQ9ij2j8nyGWk_zKL1EFa86jF-IMUPn/view?usp=drive_link" download="cv">Télécharger le CV</a>
                         </div>
                     </div>
                     </Fade>

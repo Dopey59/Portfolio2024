@@ -6,26 +6,35 @@ import 'boxicons'
 
 function SplashMessage() {
     return (
-        <div className='noisy bg-black justify-center flex h-screen'>
-            <div className='name sm:text-2xl items-center text-2xl flex'>
-                <box-icon color='orangered' size='sm' name='loader-alt' animation='spin'/>
-                <span className='h'>C</span>
-                <span className='e'>h</span>
-                <span className='l'>a</span>
-                <span className='e'>r</span>
-                <span className='e'>g</span>
-                <span className='o'>e</span>
-                <span className='w'>m</span>
-                <span className='o2'>e</span>
-                <span className='r'>n</span>
-                <span className='l3'>t</span>
-                <span className='h'>.</span>
-                <span className='e'>.</span>
-                <span className='l'>.</span>
+        <div className='noisy justify-center items-center flex overflow-y-hidden h-screen fixed w-screen overflow-x-hidden'>
+           <div class="-z-50 fixed background-texture">
+                <div class="blob-1"></div>
+                <div class="blob-2"></div>
+                <div class="blob-3"></div>
+                <div class="blob-4"></div>
             </div>
-                <div className='flex justify-center items-center bottom-1 fixed text-white'>
-                    <p className='font-light text-sm sm:text-lg'>Créé et développé par William Penet © 2024</p>
+            <div className='flex items-center'>
+                <div className='flex gap-1'>
+                    <box-icon color='blue' size='sm' name='loader-alt' animation='spin'/>
+                    <span className='h'>C</span>
+                    <span className='e'>h</span>
+                    <span className='l'>a</span>
+                    <span className='e'>r</span>
+                    <span className='e'>g</span>
+                    <span className='o'>e</span>
+                    <span className='w'>m</span>
+                    <span className='o2'>e</span>
+                    <span className='r'>n</span>
+                    <span className='l3'>t</span>
+                    <span className='h'>.</span>
+                    <span className='e'>.</span>
+                    <span className='l'>.</span>
+
                 </div>
+            </div>
+            <div className='flex justify-center items-center bottom-1 fixed text-white'>
+                <p className='font-light text-sm sm:text-lg'>Créé et développé par William Penet © 2024</p>
+            </div>
         </div>
     );
 }
@@ -47,7 +56,7 @@ export default function withSplashScreen(WrappedComponent) {
                         loading: false,
                         fade:true,
                     });
-                }, 0)
+                }, 1000)
             } catch (err) {
                 console.log(err);
                 this.setState({
