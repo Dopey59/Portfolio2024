@@ -1,16 +1,16 @@
 import './index.css';
 import "./App.css";
 
+import { Fade, Slide } from "react-awesome-reveal";
 import Header from "./views/header";
 import About from "./views/about";
 import Tools from "./views/tools";
 import Project from "./views/projects";
 import Nav from './components/navigation';
-import Contact from './components/footer';
-
+import Contact from './components/contact';
 
 import AnimatedCursor from "react-animated-cursor"
-import withSplashScreen from './components/withSplashScreen';  // Include this line
+import withSplashScreen from './components/withSplashScreen';
 
 let docTitle = document.title;
 window.addEventListener("blur", () => {
@@ -23,7 +23,8 @@ window.addEventListener("focus", () =>{
 function App() {
   return (
     <>
-    <div className='w-full h-auto'>
+      
+    <div className=' relative overflow-x-hidden overflow-y-hidden'>
       <AnimatedCursor
         innerSize={8}
         outerSize={10}
@@ -56,12 +57,18 @@ function App() {
           }
         ]}
       />
-     <Header/> 
-     <About/> 
-     <Tools/> 
-     <Project/>
-     <Nav/>
-     <Contact/>
+    <div class="-z-50 background-texture">
+      <div class="blob-1"></div>
+      <div class="blob-2"></div>
+      <div class="blob-3"></div>
+      <div class="blob-4"></div>
+    </div>  
+    <Header/> 
+    <About/> 
+    <Tools/> 
+    <Project/>
+    <Nav/>
+    <Contact/>
     </div>
     </>
   );

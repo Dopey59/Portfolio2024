@@ -3,8 +3,9 @@ import '../card.css';
 export default function Tools(){
     return(
         <>
-         <div id="tools" className="bg-zinc-800 mx-auto flex items-center flex-col justify-center h-fit sm:h-screen">
-                <h2 className='text-orange-600 sm:text-3xl text-2xl text-center sm:mx-6 py-6 '>Outils - Compétences</h2>
+
+         <div id="tools" className="mx-auto flex items-center flex-col justify-center sm:h-screen mb-16">
+                <h2 className='sm:text-3xl text-2xl sm:mx-6 py-6 '>Outils - Compétences</h2>
                 <div class="ag-courses_box w-full overflow-x-auto sm:overflow-hidden sm:flex-row ">
                     <div class="ag-courses_item">
                     <div class="ag-courses-item_link">

@@ -5,10 +5,6 @@ import Image3 from '../assets/images-projets/twitter2.png';
 import Image4 from '../assets/images-projets/commerce3.jpg';
 import Image5 from '../assets/images-projets/portfolio2024.jpg';
 
-
-import Video from'../assets/video/particles2.mp4'; 
-
-
 export default function Projects() {
     const [showImage1, setShowImage1] = useState(false);
     const [showImage2, setShowImage2] = useState(false);
@@ -19,18 +15,16 @@ export default function Projects() {
 
     return(
         <>
-        <div id="projects" className="relative noisy h-screen">
-            <video autoPlay="autoplay" loop="loop" muted className="video">
-                <source src={Video} type="video/mp4"></source>
-            </video>
-            <div className="mainContainer sm:grid sm:grid-cols-2 flex flex-col items-center mx-10 sm:mx-10 ">
-                <div className="elementContainer flex flex-col gap-6 w-fit text-gray-400">
-                    <h2 className="text-orange-600 text-3xl mt-6 font-black">Projets réalisés</h2>
-
+        <div id="projects" className="relative">
+            <div className="mainContainer sm:grid sm:grid-cols-2 items-center sm:items-start flex flex-col mx-5 sm:mx-10">
+                <div className="elementContainer flex flex-col gap-8 w-full ">
+                    <div className='text-center sm:text-left'>
+                        <h2 className="sm:text-3xl text-2xl">Projets réalisés</h2>
+                    </div>
                     <div className=""
                         onMouseEnter={() => setShowImage5(true)}
                         onMouseLeave={() => setShowImage5(false)}>
-                        <p className="sm:text-2xl font duration-0 hover:duration-500 hover:text-white ">Portfolio 2024</p>
+                        <p className="sm:text-2xl font duration-0 hover:duration-500 text-[#0057FF] ">Portfolio 2024</p>
                         <p className="font-light">Projet personnel</p>
                     </div>
                     <span className='border-1 border-b border-gray-500'></span>
@@ -38,7 +32,7 @@ export default function Projects() {
                         <div className=""
                             onMouseEnter={() => setShowImage1(true)}
                             onMouseLeave={() => setShowImage1(false)}>
-                            <p className="sm:text-2xl font duration-0 hover:duration-500 hover:text-white ">Shift Gaming</p>
+                            <p className="sm:text-2xl font duration-0 hover:duration-500 text-[#0057FF] ">Shift Gaming</p>
                             <p className="font-light">Projet personnel</p>
                         </div>
                     </a>
@@ -48,7 +42,7 @@ export default function Projects() {
                         <div className=""
                             onMouseEnter={() => setShowImage2(true)}
                             onMouseLeave={() => setShowImage2(false)}>
-                            <p className="sm:text-2xl font duration-0 hover:duration-500 hover:text-white">Previously On</p>
+                            <p className="sm:text-2xl font duration-0 hover:duration-500 text-[#0057FF]">Previously On</p>
                             <p className="font-light">Projet scolaire</p>
                         </div>
                     </a>
@@ -59,7 +53,7 @@ export default function Projects() {
                         <div className=""
                             onMouseEnter={() => setShowImage3(true)}
                             onMouseLeave={() => setShowImage3(false)}>
-                            <p className="sm:text-2xl font duration-0 hover:duration-500 hover:text-white">Twitter - Clone</p>
+                            <p className="sm:text-2xl font duration-0 hover:duration-500 text-[#0057FF]">Twitter - Clone</p>
                             <p className="font-light">Projet scolaire</p>
                         </div>
                     </a>
@@ -70,19 +64,16 @@ export default function Projects() {
                         <div className=""
                             onMouseEnter={() => setShowImage4(true)}
                             onMouseLeave={() => setShowImage4(false)}>
-                            <p className="sm:text-2xl font duration-0 hover:duration-500 hover:text-white">E-commerce</p>
+                            <p className="sm:text-2xl font duration-0 hover:duration-500 text-[#0057FF]">E-commerce</p>
                             <p className="font-light ">Projet scolaire</p>
                         </div>
                     </a>
-
-                    <span className='border-1 border-b border-gray-500'></span>
-
-                    
+                    <span className='border-1 border-b border-gray-500'></span>                    
                 </div>
 
-                <div className='imagesShowed sm:h-screen h-fit flex items-center'>
+                <div className='imagesShowed sm:h-screen h-fit flex mx-10 items-center'>
                     {showImage1 && (
-                    <div className="">
+                        <div className="">
                         <img src={Image1} alt="Description" className='border-white border-8 rounded-xl  h-auto'/>
                     </div>
                     )}
