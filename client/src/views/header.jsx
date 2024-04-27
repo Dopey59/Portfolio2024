@@ -4,7 +4,7 @@ import Location from '../assets/location.png'
 export default function Header(){
     return(
         <>
-        <div className='bg-white'>
+        <div className='noisy '>
             <div className='flex justify-between items-center bg-blue-600 text-white'>
                 <div className='mx-4'>
                     <h1 className='sm:text-base text-sm'>Portfolio 2024</h1>
