@@ -47,7 +47,7 @@ export default function ContactUs() {
     <>
       {/* <!-- Hero --> */}
       <div id="contact" className="">
-        <div className="flex justify-center px-4 sm:px-24 bg-white/70 h-screen items-center ">
+        <div className="noisy flex justify-center px-4 sm:px-24  h-screen items-center ">
           <div className="md:pr-8 md:w-1/2 xl:pr-0 xl:w-5/12">
             {/* <!-- Title --> */}
             <h1 className="text-3xl sm:text-left text-center text-indigo-800 font-bold md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight">
